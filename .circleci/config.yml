@@ -114,7 +114,7 @@ jobs:
             set -ex
             yarn build
             yarn deploy
-#            aws cloudfront create-invalidation --distribution-id E3GZEG7RQCVAS3 --paths /index.html
+            aws cloudfront create-invalidation --distribution-id E34J31TKDTTTQA --paths /index.html
           no_output_timeout: 30m
 
 workflows:
