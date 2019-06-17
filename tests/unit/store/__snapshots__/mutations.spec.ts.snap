@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mutations SET_POLL should set poll to expected path 1`] = `
+Object {
+  "polls": Object {
+    "4": Object {
+      "created_at": "2019-06-16T17:43:40.770Z",
+      "ends_at": "2019-06-16T17:43:40.510Z",
+      "id": 4,
+      "poll_title": "safdasfsdfaghf",
+      "starts_at": "2019-06-16T17:43:40.770Z",
+    },
+  },
+}
+`;
