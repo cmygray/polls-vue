@@ -1,7 +1,7 @@
 <template>
-  <section class="home">
+  <v-container tag="section" class="home">
     <h1>Home</h1>
-  </section>
+  </v-container>
 </template>
 
 <script lang="ts">
