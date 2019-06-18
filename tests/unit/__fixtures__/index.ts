@@ -120,3 +120,24 @@ export const choice = {
   "choice_text": "항목을 입력하세요",
   "votes_count": 0
 }
+
+export const choiceList = [
+  {
+    "id": "1",
+    "poll_id": "86",
+    "choice_text": "항목을 입력하세요",
+    "votes_count": 0
+  },
+  {
+    "id": "2",
+    "poll_id": "86",
+    "choice_text": "항목을 입력하세요",
+    "votes_count": 0
+  },
+  {
+    "id": "3",
+    "poll_id": "86",
+    "choice_text": "항목을 입력하세요",
+    "votes_count": 0
+  }
+]
