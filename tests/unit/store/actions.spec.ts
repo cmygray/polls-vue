@@ -18,7 +18,7 @@ describe('actions', () => {
       const result = await actions.fetchPolls(contextMock)
 
       expect(result).toEqual(pollDataList.map(pollData => ({
-        id: pollData.pk,
+        id: String(pollData.pk),
         ...pollData.fields,
       })))
     })

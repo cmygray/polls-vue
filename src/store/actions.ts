@@ -10,7 +10,7 @@ export const actions: ActionTree<State, State> = {
 
     return data.map(pollData => {
       const poll = {
-        id: pollData.pk,
+        id: String(pollData.pk),
         ...pollData.fields,
       };
 
