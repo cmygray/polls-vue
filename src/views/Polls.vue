@@ -2,12 +2,16 @@
   <v-container tag="section" class="polls">
     <h1>All Polls</h1>
 
-    <v-text-field
-      v-model="titleToAppend"
-      :append-outer-icon="'add'"
-      placeholder="제목을 입력하세요"
-      @click:append-outer="addPoll"
-    />
+    <v-text-field v-model="titleToAppend" label="Poll title" />
+
+    <v-btn
+      large
+      block
+      color="primary"
+      :disabled="!titleToAppend"
+      @click="addPoll"
+      >Create</v-btn
+    >
 
     <poll-item v-for="poll in polls" :key="poll.id" :poll="poll" />
   </v-container>
