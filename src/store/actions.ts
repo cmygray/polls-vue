@@ -2,7 +2,7 @@ import { ActionTree } from 'vuex';
 
 import { State } from '@/store/state';
 import { Poll } from '@/models';
-import { fetchPolls } from '@/apis';
+import { createPoll, fetchPolls } from '@/apis';
 
 export const actions: ActionTree<State, State> = {
   async fetchPolls({ commit }): Promise<Poll[]> {
@@ -17,5 +17,18 @@ export const actions: ActionTree<State, State> = {
       commit('SET_POLL', poll);
       return poll;
     });
+  },
+
+  async createPoll({ commit }, title): Promise<Poll> {
+    const { data } = await createPoll(title);
+
+    const poll = {
+      id: String(data.pk),
+      ...data.fields,
+    };
+
+    commit('SET_POLL', poll);
+
+    return poll;
   },
 };

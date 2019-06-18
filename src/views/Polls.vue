@@ -2,6 +2,13 @@
   <v-container tag="section" class="polls">
     <h1>All Polls</h1>
 
+    <v-text-field
+      v-model="titleToAppend"
+      :append-outer-icon="'add'"
+      placeholder="제목을 입력하세요"
+      @click:append-outer="addPoll"
+    />
+
     <poll-item v-for="poll in polls" :key="poll.id" :poll="poll" />
   </v-container>
 </template>
@@ -19,14 +26,36 @@ import { Poll } from '@/models';
   },
 })
 export default class Polls extends Vue {
+  titleToAppend: string = '';
+
   @Getter('allPolls')
   polls: Poll[];
 
   @Action('fetchPolls')
-  fetchPolls: () => Poll[];
+  fetchPolls: () => Promise<Poll[]>;
+
+  @Action('createPoll')
+  createPoll: (param: string) => Promise<Poll>;
 
   async mounted() {
     await this.fetchPolls();
+  }
+
+  async addPoll() {
+    if (!this.titleToAppend) return;
+
+    try {
+      const { id } = await this.createPoll(this.titleToAppend);
+
+      this.$router.push({
+        name: 'poll.edit',
+        params: {
+          id,
+        },
+      });
+    } catch (error) {
+      //
+    }
   }
 }
 </script>

@@ -13,3 +13,9 @@ interface PollData {
 export async function fetchPolls(): Promise<{ data: PollData[] }> {
   return client.get('polls/');
 }
+
+export async function createPoll(title: string): Promise<{ data: PollData }> {
+  return client.post('polls/', {
+    poll_title: title,
+  });
+}

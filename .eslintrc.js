@@ -18,6 +18,7 @@ module.exports = {
       },
     ],
     indent: 'off',
+    '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/explicit-function-return-type': ['warn', {
       allowExpressions: true,

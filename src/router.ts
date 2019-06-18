@@ -17,7 +17,14 @@ export default new Router({
       path: '/polls',
       name: 'poll.index',
       component: () =>
-        import(/* webpackChunkName: "polls" */ './views/Polls.vue'),
+        import(/* webpackchunkname: "polls" */ './views/Polls.vue'),
+    },
+    {
+      path: '/polls/:id/edit',
+      name: 'poll.edit',
+      component: () =>
+        import(/* webpackchunkname: "polls.edit" */ './views/PollEdit.vue'),
+      props: true,
     },
   ],
 });

@@ -12,6 +12,27 @@ describe('actions', () => {
     jest.clearAllMocks()
   })
 
+  describe('createPoll', () => {
+    const TITLE = 'poll title'
+    it('should return created poll', async () => {
+      // @ts-ignore
+      const result = await actions.createPoll(contextMock, TITLE)
+
+      expect(result).toEqual(expect.objectContaining({
+        poll_title: TITLE,
+      }))
+    })
+
+    it("should commit expected mutation", async () => {
+      // @ts-ignore
+      await actions.createPoll(contextMock, TITLE)
+
+      expect(contextMock.commit).toBeCalledWith(
+        'SET_POLL', expect.objectContaining({})
+      )
+    })
+  })
+
   describe('fetchPolls', () => {
     it('should return list of fetched polls', async () => {
       // @ts-ignore

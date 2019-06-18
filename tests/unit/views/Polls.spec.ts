@@ -2,7 +2,7 @@ import Vuex from 'vuex';
 import { createLocalVue, mount } from '@vue/test-utils';
 
 import Polls from '@/views/Polls.vue';
-import { pollList } from '../__fixtures__';
+import { poll, pollList } from '../__fixtures__';
 import '../setup';
 
 const localVue = createLocalVue();
@@ -45,6 +45,49 @@ describe('Polls.vue', () => {
     })
     it('should dispatch expected action', () => {
       expect(wrapper.vm.$store.dispatch).toBeCalledWith('fetchPolls')
+    })
+  })
+
+  describe('#addPoll', () => {
+    const POLL_TITLE = 'poll title'
+
+    beforeEach(() => {
+      wrapper = mount(Polls, {
+        localVue,
+        data: () => ({ titleToAppend: POLL_TITLE }),
+        computed: {
+          polls: () => pollList
+        },
+        store: new Vuex.Store({
+          actions: {
+            fetchPolls: () => Promise.resolve(),
+            createPoll: () => Promise.resolve(poll)
+          }
+        }),
+        mocks: {
+          $router: {
+            push: jest.fn()
+          }
+        }
+      });
+    })
+
+    it('should dispatch createPoll action', async () => {
+      const spy = jest.spyOn(wrapper.vm.$store, 'dispatch')
+      await wrapper.vm.addPoll()
+
+      expect(spy).toBeCalledWith('createPoll', POLL_TITLE)
+    })
+
+    it('should redirect to poll.edit after creation', async () => {
+      await wrapper.vm.addPoll()
+
+      expect(wrapper.vm.$router.push).toBeCalledWith({
+        name: 'poll.edit',
+        params: {
+          id: poll.id
+        },
+      })
     })
   })
 });

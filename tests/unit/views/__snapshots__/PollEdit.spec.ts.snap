@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PollEdit.vue renders as expected 1`] = `
+<section class="container poll-edit">
+  <h1>Edit Poll</h1>
+</section>
+`;

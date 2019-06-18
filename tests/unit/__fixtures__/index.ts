@@ -41,6 +41,17 @@ export const pollDataList = [
   }
 ]
 
+export const pollData = {
+  "model": "polls.poll",
+  "pk": 78,
+  "fields": {
+    "poll_title": "test",
+    "created_at": "2019-06-18T17:40:49.038",
+    "starts_at": null,
+    "ends_at": null
+  }
+}
+
 export const pollList = [
   {
     "id": 4,
