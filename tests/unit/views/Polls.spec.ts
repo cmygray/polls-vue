@@ -2,7 +2,7 @@ import Vuex from 'vuex';
 import { createLocalVue, mount } from '@vue/test-utils';
 
 import Polls from '@/views/Polls.vue';
-import './setup';
+import '../setup';
 
 const localVue = createLocalVue();
 localVue.use(Vuex)

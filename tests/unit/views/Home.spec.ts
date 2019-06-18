@@ -1,7 +1,7 @@
 import { createLocalVue, mount } from '@vue/test-utils';
 
 import Home from '@/views/Home.vue';
-import './setup';
+import '../setup';
 
 const localVue = createLocalVue();
 

@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test:unit:ci": "yarn test:unit --ci --runInBand",
+    "test:unit:ci": "TZ=Asia/Seoul yarn test:unit --ci --runInBand",
     "deploy": "sls deploy"
   },
   "dependencies": {
