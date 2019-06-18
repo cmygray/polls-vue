@@ -3,5 +3,36 @@
 exports[`Polls.vue renders as expected 1`] = `
 <section class="container polls">
   <h1>All Polls</h1>
+  <article class="poll my-4 v-card v-sheet theme--light">
+    <div class="v-card__title title">
+      Poll title 3
+    </div>
+    <div class="v-card__text">
+      <dl>
+        <dt><small>시작</small></dt>
+        <dd>2019-06-18 17:43</dd>
+        <dt><small>종료</small></dt>
+        <dd>
+          2019-06-25 17:43
+        </dd>
+      </dl>
+    </div>
+  </article>
+  <article class="poll my-4 v-card v-sheet theme--light">
+    <div class="v-card__title title">
+      Poll title 2
+    </div>
+    <div class="v-card__text">
+      <p>종료된 투표입니다</p>
+    </div>
+  </article>
+  <article class="poll my-4 v-card v-sheet theme--light">
+    <div class="v-card__title title">
+      Poll title 1
+    </div>
+    <div class="v-card__text">
+      <p>종료된 투표입니다</p>
+    </div>
+  </article>
 </section>
 `;

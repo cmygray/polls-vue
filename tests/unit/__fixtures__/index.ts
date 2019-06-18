@@ -41,6 +41,30 @@ export const pollDataList = [
   }
 ]
 
+export const pollList = [
+  {
+    "id": 4,
+    "poll_title": "Poll title 3",
+    "created_at": "2019-06-17T17:43:40.770Z",
+    "starts_at": "2019-06-17T17:43:40.770Z",
+    "ends_at": "2019-06-24T17:43:40.510Z"
+  },
+  {
+    "id": 2,
+    "poll_title": "Poll title 2",
+    "created_at": "2019-06-16T17:43:40.770Z",
+    "starts_at": "2019-06-16T17:43:40.770Z",
+    "ends_at": "2019-06-17T17:43:40.510Z"
+  },
+  {
+    "id": 1,
+    "poll_title": "Poll title 1",
+    "created_at": "2019-06-15T17:43:40.770Z",
+    "starts_at": "2019-06-15T17:43:40.770Z",
+    "ends_at": "2019-06-16T17:43:40.510Z"
+  }
+]
+
 export const poll = {
   "id": 4,
   "poll_title": "safdasfsdfaghf",
