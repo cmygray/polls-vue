@@ -77,9 +77,46 @@ export const pollList = [
 ]
 
 export const poll = {
-  "id": 4,
+  "id": "4",
   "poll_title": "safdasfsdfaghf",
   "created_at": "2019-06-16T17:43:40.770Z",
   "starts_at": "2019-06-16T17:43:40.770Z",
   "ends_at": "2019-06-16T17:43:40.510Z"
+}
+
+export const choiceDataList = [
+  {
+    "model": "polls.choice",
+    "pk": 147,
+    "fields": {
+      "poll_id": 86,
+      "choice_text": "항목을 입력하세요",
+      "votes_count": 0
+    }
+  },
+  {
+    "model": "polls.choice",
+    "pk": 148,
+    "fields": {
+      "poll_id": 86,
+      "choice_text": "항목을 입력하세요",
+      "votes_count": 0
+    }
+  },
+  {
+    "model": "polls.choice",
+    "pk": 149,
+    "fields": {
+      "poll_id": 86,
+      "choice_text": "항목을 입력하세요",
+      "votes_count": 0
+    }
+  }
+]
+
+export const choice = {
+  "id": "149",
+  "poll_id": "86",
+  "choice_text": "항목을 입력하세요",
+  "votes_count": 0
 }

@@ -1,12 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`mutations SET_POLL should set poll to expected path 1`] = `
+exports[`mutations SET_CHOICE should set choice to expected path 1`] = `
 Object {
+  "choices": Object {
+    "149": Object {
+      "choice_text": "항목을 입력하세요",
+      "id": "149",
+      "poll_id": "86",
+      "votes_count": 0,
+    },
+  },
   "polls": Object {
     "4": Object {
       "created_at": "2019-06-16T17:43:40.770Z",
       "ends_at": "2019-06-16T17:43:40.510Z",
-      "id": 4,
+      "id": "4",
+      "poll_title": "safdasfsdfaghf",
+      "starts_at": "2019-06-16T17:43:40.770Z",
+    },
+  },
+}
+`;
+
+exports[`mutations SET_POLL should set poll to expected path 1`] = `
+Object {
+  "choices": Object {},
+  "polls": Object {
+    "4": Object {
+      "created_at": "2019-06-16T17:43:40.770Z",
+      "ends_at": "2019-06-16T17:43:40.510Z",
+      "id": "4",
       "poll_title": "safdasfsdfaghf",
       "starts_at": "2019-06-16T17:43:40.770Z",
     },

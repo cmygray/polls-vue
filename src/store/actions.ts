@@ -1,8 +1,8 @@
 import { ActionTree } from 'vuex';
 
 import { State } from '@/store/state';
-import { Poll } from '@/models';
-import { createPoll, fetchPolls } from '@/apis';
+import { Choice, Poll } from '@/models';
+import { createPoll, fetchChoices, fetchPolls } from '@/apis';
 
 export const actions: ActionTree<State, State> = {
   async fetchPolls({ commit }): Promise<Poll[]> {
@@ -16,6 +16,21 @@ export const actions: ActionTree<State, State> = {
 
       commit('SET_POLL', poll);
       return poll;
+    });
+  },
+
+  async fetchChoices({ commit }, pollId: string): Promise<Choice[]> {
+    const { data } = await fetchChoices(pollId);
+
+    return data.map(choiceData => {
+      const choice = {
+        ...choiceData.fields,
+        id: String(choiceData.pk),
+        poll_id: String(choiceData.fields.poll_id),
+      };
+
+      commit('SET_CHOICE', choice);
+      return choice;
     });
   },
 

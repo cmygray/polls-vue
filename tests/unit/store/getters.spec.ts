@@ -6,7 +6,7 @@ describe('getters', () => {
   let state: State
 
   beforeEach(() => {
-    state = { polls: {} }
+    state = { polls: {}, choices: {} }
   })
 
   describe('allPolls', () => {
@@ -28,7 +28,8 @@ describe('getters', () => {
             id: 'newer',
             created_at: '2019-06-17T17:47:36.840Z'
           }
-        }
+        },
+        choices: {}
       }
     })
 
