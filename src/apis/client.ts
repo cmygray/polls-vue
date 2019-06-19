@@ -13,3 +13,9 @@ function baseURL(): string {
 export const client = axios.create({
   baseURL: baseURL(),
 });
+
+client.interceptors.request.use(config => {
+  if (config.url && !config.url.endsWith('/')) config.url += '/';
+
+  return config;
+});
