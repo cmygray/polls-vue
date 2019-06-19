@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Emit, Prop, Vue } from 'vue-property-decorator';
 import { Choice, Poll } from '@/models';
 
 @Component
@@ -34,11 +34,12 @@ export default class PollForm extends Vue {
     );
   }
 
+  @Emit('poll-form:submit')
   handleSubmit() {
-    this.$emit('poll-form:submit', {
+    return {
       poll_title: this.poll_title,
       choices: this.choices,
-    });
+    };
   }
 }
 </script>
