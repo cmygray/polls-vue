@@ -1,6 +1,7 @@
 export interface Poll {
   id: string;
   poll_title: string;
+  choices: Choice[];
   created_at: string;
   starts_at: string;
   ends_at: string;
@@ -8,7 +9,7 @@ export interface Poll {
 
 export interface Choice {
   id: string;
-  poll_id: string;
+  poll_id: number;
   choice_text: string;
   votes_count: number;
 }

@@ -19,33 +19,77 @@ exports[`Polls.vue renders as expected 1`] = `
   </button>
   <article class="poll my-4 v-card v-sheet theme--light">
     <div class="v-card__title title">
-      Poll title 3
+      safdasfsdfaghf
     </div>
     <div class="v-card__text">
       <dl>
         <dt><small>시작</small></dt>
-        <dd>2019-06-18 17:43</dd>
+        <dd>2019-06-18 01:58</dd>
         <dt><small>종료</small></dt>
         <dd>
-          2019-06-25 17:43
+          2019-06-21 15:00
         </dd>
       </dl>
     </div>
   </article>
   <article class="poll my-4 v-card v-sheet theme--light">
     <div class="v-card__title title">
-      Poll title 2
+      TEST
     </div>
     <div class="v-card__text">
-      <p>종료된 투표입니다</p>
+      <dl>
+        <dt><small>시작</small></dt>
+        <dd>2019-06-18 04:33</dd>
+        <dt><small>종료</small></dt>
+        <dd>
+          2019-06-21 15:00
+        </dd>
+      </dl>
     </div>
   </article>
   <article class="poll my-4 v-card v-sheet theme--light">
     <div class="v-card__title title">
-      Poll title 1
+      TEST
     </div>
     <div class="v-card__text">
-      <p>종료된 투표입니다</p>
+      <dl>
+        <dt><small>시작</small></dt>
+        <dd>2019-06-18 06:28</dd>
+        <dt><small>종료</small></dt>
+        <dd>
+          2019-06-21 15:00
+        </dd>
+      </dl>
+    </div>
+  </article>
+  <article class="poll my-4 v-card v-sheet theme--light">
+    <div class="v-card__title title">
+      TEST
+    </div>
+    <div class="v-card__text">
+      <dl>
+        <dt><small>시작</small></dt>
+        <dd>2019-06-18 06:30</dd>
+        <dt><small>종료</small></dt>
+        <dd>
+          2019-06-21 15:00
+        </dd>
+      </dl>
+    </div>
+  </article>
+  <article class="poll my-4 v-card v-sheet theme--light">
+    <div class="v-card__title title">
+      TEST
+    </div>
+    <div class="v-card__text">
+      <dl>
+        <dt><small>시작</small></dt>
+        <dd>2019-06-18 03:00</dd>
+        <dt><small>종료</small></dt>
+        <dd>
+          2019-06-25 03:00
+        </dd>
+      </dl>
     </div>
   </article>
 </section>

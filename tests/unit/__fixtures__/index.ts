@@ -1,143 +1,136 @@
-export const pollDataList = [
-  {
-    "model": "polls.poll",
-    "pk": 1,
-    "fields": {
-      "poll_title": "safdasfsdfa",
-      "created_at": "2019-06-16T17:41:26.279Z",
-      "starts_at": "2019-06-16T17:41:26.279Z",
-      "ends_at": "2019-06-17T15:00:00Z"
-    }
-  },
-  {
-    "model": "polls.poll",
-    "pk": 2,
-    "fields": {
-      "poll_title": "safdasfsdfa",
-      "created_at": "2019-06-16T17:41:55.353Z",
-      "starts_at": "2019-06-16T17:41:55.353Z",
-      "ends_at": "2019-06-17T15:00:00Z"
-    }
-  },
-  {
-    "model": "polls.poll",
-    "pk": 3,
-    "fields": {
-      "poll_title": "safdasfsdfaghf",
-      "created_at": "2019-06-16T17:42:05.366Z",
-      "starts_at": "2019-06-16T17:42:05.366Z",
-      "ends_at": "2019-06-17T15:00:00Z"
-    }
-  },
-  {
-    "model": "polls.poll",
-    "pk": 4,
-    "fields": {
-      "poll_title": "safdasfsdfaghf",
-      "created_at": "2019-06-16T17:43:40.770Z",
-      "starts_at": "2019-06-16T17:43:40.770Z",
-      "ends_at": "2019-06-16T17:43:40.510Z"
-    }
-  }
-]
+import { Poll } from '@/models';
 
-export const pollData = {
-  "model": "polls.poll",
-  "pk": 78,
-  "fields": {
-    "poll_title": "test",
-    "created_at": "2019-06-18T17:40:49.038",
-    "starts_at": null,
-    "ends_at": null
+export const poll: Poll = {
+  "id": "28",
+  "choices": [
+  {
+    "id": "5",
+    "choice_text": "항목을 입력하세요",
+    "votes_count": 0,
+    "poll_id": 28
+  },
+  {
+    "id": "6",
+    "choice_text": "항목을 입력하세요",
+    "votes_count": 0,
+    "poll_id": 28
+  },
+  {
+    "id": "7",
+    "choice_text": "항목을 입력하세요",
+    "votes_count": 0,
+    "poll_id": 28
   }
+],
+  "poll_title": "TEST",
+  "created_at": "2019-06-18T15:28:29.909356",
+  "starts_at": "2019-06-18T15:28:29.909377",
+  "ends_at": "2019-06-21T00:00:00"
 }
 
-export const pollList = [
+export const pollList: Poll[] = [
   {
-    "id": 4,
-    "poll_title": "Poll title 3",
-    "created_at": "2019-06-17T17:43:40.770Z",
-    "starts_at": "2019-06-17T17:43:40.770Z",
-    "ends_at": "2019-06-24T17:43:40.510Z"
+    "id": "26",
+    "choices": [
+      {
+        "id": "1",
+        "choice_text": "option 1",
+        "votes_count": 0,
+        "poll_id": 26
+      }
+    ],
+    "poll_title": "safdasfsdfaghf",
+    "created_at": "2019-06-18T10:58:41.237330",
+    "starts_at": "2019-06-18T10:58:41.237362",
+    "ends_at": "2019-06-21T00:00:00"
   },
   {
-    "id": 2,
-    "poll_title": "Poll title 2",
-    "created_at": "2019-06-16T17:43:40.770Z",
-    "starts_at": "2019-06-16T17:43:40.770Z",
-    "ends_at": "2019-06-17T17:43:40.510Z"
+    "id": "27",
+    "choices": [],
+    "poll_title": "TEST",
+    "created_at": "2019-06-18T13:33:34.031095",
+    "starts_at": "2019-06-18T13:33:34.031124",
+    "ends_at": "2019-06-21T00:00:00"
   },
   {
-    "id": 1,
-    "poll_title": "Poll title 1",
-    "created_at": "2019-06-15T17:43:40.770Z",
-    "starts_at": "2019-06-15T17:43:40.770Z",
-    "ends_at": "2019-06-16T17:43:40.510Z"
-  }
-]
-
-export const poll = {
-  "id": "4",
-  "poll_title": "safdasfsdfaghf",
-  "created_at": "2019-06-16T17:43:40.770Z",
-  "starts_at": "2019-06-16T17:43:40.770Z",
-  "ends_at": "2019-06-16T17:43:40.510Z"
-}
-
-export const choiceDataList = [
-  {
-    "model": "polls.choice",
-    "pk": 147,
-    "fields": {
-      "poll_id": 86,
-      "choice_text": "항목을 입력하세요",
-      "votes_count": 0
-    }
+    "id": "28",
+    "choices": [
+      {
+        "id": "5",
+        "choice_text": "항목을 입력하세요",
+        "votes_count": 0,
+        "poll_id": 28
+      },
+      {
+        "id": "6",
+        "choice_text": "항목을 입력하세요",
+        "votes_count": 0,
+        "poll_id": 28
+      },
+      {
+        "id": "7",
+        "choice_text": "항목을 입력하세요",
+        "votes_count": 0,
+        "poll_id": 28
+      }
+    ],
+    "poll_title": "TEST",
+    "created_at": "2019-06-18T15:28:29.909356",
+    "starts_at": "2019-06-18T15:28:29.909377",
+    "ends_at": "2019-06-21T00:00:00"
   },
   {
-    "model": "polls.choice",
-    "pk": 148,
-    "fields": {
-      "poll_id": 86,
-      "choice_text": "항목을 입력하세요",
-      "votes_count": 0
-    }
+    "id": "29",
+    "choices": [
+      {
+        "id": "9",
+        "choice_text": "항목을 입력하세요",
+        "votes_count": 0,
+        "poll_id": 29
+      },
+      {
+        "id": "10",
+        "choice_text": "항목을 입력하세요",
+        "votes_count": 0,
+        "poll_id": 29
+      },
+      {
+        "id": "11",
+        "choice_text": "항목을 입력하세요",
+        "votes_count": 0,
+        "poll_id": 29
+      }
+    ],
+    "poll_title": "TEST",
+    "created_at": "2019-06-18T15:30:58.342577",
+    "starts_at": "2019-06-18T15:30:58.342621",
+    "ends_at": "2019-06-21T00:00:00"
   },
   {
-    "model": "polls.choice",
-    "pk": 149,
-    "fields": {
-      "poll_id": 86,
-      "choice_text": "항목을 입력하세요",
-      "votes_count": 0
-    }
-  }
-]
-
-export const choice = {
-  "id": "149",
-  "poll_id": "86",
-  "choice_text": "항목을 입력하세요",
-  "votes_count": 0
-}
-
-export const choiceList = [
-  {
-    "id": "1",
-    "poll_id": "86",
-    "choice_text": "항목을 입력하세요",
-    "votes_count": 0
-  },
-  {
-    "id": "2",
-    "poll_id": "86",
-    "choice_text": "항목을 입력하세요",
-    "votes_count": 0
-  },
-  {
-    "id": "3",
-    "poll_id": "86",
-    "choice_text": "항목을 입력하세요",
-    "votes_count": 0
+    "id": "35",
+    "choices": [
+      {
+        "id": "18",
+        "choice_text": "항목을 입력하세요",
+        "votes_count": 0,
+        "poll_id": 35
+      },
+      {
+        "id": "19",
+        "choice_text": "항목을 입력하세요",
+        "votes_count": 0,
+        "poll_id": 35
+      },
+      {
+        "id": "20",
+        "choice_text": "항목을 입력하세요",
+        "votes_count": 0,
+        "poll_id": 35
+      }
+    ],
+    "poll_title": "TEST",
+    "created_at": "2019-06-18T15:59:36.556764",
+    "starts_at": "2019-06-18T12:00:00",
+    "ends_at": "2019-06-25T12:00:00"
   }
 ]

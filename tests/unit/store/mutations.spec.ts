@@ -1,6 +1,6 @@
 import { state } from '@/store/state';
 import { mutations } from '@/store/mutations';
-import { choice, poll } from '../__fixtures__';
+import { poll } from '../__fixtures__';
 
 describe('mutations', () => {
   describe('SET_POLL', () => {
@@ -13,15 +13,4 @@ describe('mutations', () => {
       expect(state.polls[PATH]).toEqual(poll)
     });
   });
-
-  describe('SET_CHOICE', () => {
-    it('should set choice to expected path', () => {
-      const PATH = choice.id
-
-      mutations.SET_CHOICE(state, choice);
-
-      expect(state).toMatchSnapshot();
-      expect(state.choices[PATH]).toEqual(choice)
-    })
-  })
 });

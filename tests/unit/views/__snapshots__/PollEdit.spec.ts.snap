@@ -3,25 +3,6 @@
 exports[`PollEdit.vue renders as expected 1`] = `
 <section class="container poll-edit">
   <h1>Edit Poll</h1>
-  [
-  {
-  "id": "1",
-  "poll_id": "86",
-  "choice_text": "항목을 입력하세요",
-  "votes_count": 0
-  },
-  {
-  "id": "2",
-  "poll_id": "86",
-  "choice_text": "항목을 입력하세요",
-  "votes_count": 0
-  },
-  {
-  "id": "3",
-  "poll_id": "86",
-  "choice_text": "항목을 입력하세요",
-  "votes_count": 0
-  }
-  ]
+  blah
 </section>
 `;
