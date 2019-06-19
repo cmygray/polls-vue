@@ -7,6 +7,10 @@ exports[`PollItem.vue when ended poll is provided as prop should render as expec
   </div>
   <div class="v-card__text">
     <p>종료된 투표입니다</p>
+    <!---->
+  </div>
+  <div class="v-card__actions">
+    <!---->
   </div>
 </article>
 `;
@@ -25,6 +29,32 @@ exports[`PollItem.vue when ongoing poll is provided as prop should render as exp
         2019-06-19 20:00
       </dd>
     </dl>
+    <div class="v-input v-input--selection-controls v-input--radio-group v-input--radio-group--column v-input--hide-details theme--light">
+      <div class="v-input__control">
+        <div class="v-input__slot" style="height: auto;">
+          <div role="radiogroup" class="v-input--radio-group__input"><label aria-hidden="true" class="v-label theme--light" style="left: 0px; position: relative;">Choices</label>
+            <div class="v-radio theme--light">
+              <div class="v-input--selection-controls__input"><input aria-label="항목을 입력하세요" aria-checked="false" role="radio" type="radio" name="v-radio-4" value="5">
+                <div class="v-input--selection-controls__ripple"></div><i aria-hidden="true" class="v-icon material-icons theme--light">radio_button_unchecked</i>
+              </div><label aria-hidden="true" class="v-label theme--light" style="left: 0px; position: relative;">항목을 입력하세요</label>
+            </div>
+            <div class="v-radio theme--light">
+              <div class="v-input--selection-controls__input"><input aria-label="항목을 입력하세요" aria-checked="false" role="radio" type="radio" name="v-radio-4" value="6">
+                <div class="v-input--selection-controls__ripple"></div><i aria-hidden="true" class="v-icon material-icons theme--light">radio_button_unchecked</i>
+              </div><label aria-hidden="true" class="v-label theme--light" style="left: 0px; position: relative;">항목을 입력하세요</label>
+            </div>
+            <div class="v-radio theme--light">
+              <div class="v-input--selection-controls__input"><input aria-label="항목을 입력하세요" aria-checked="false" role="radio" type="radio" name="v-radio-4" value="7">
+                <div class="v-input--selection-controls__ripple"></div><i aria-hidden="true" class="v-icon material-icons theme--light">radio_button_unchecked</i>
+              </div><label aria-hidden="true" class="v-label theme--light" style="left: 0px; position: relative;">항목을 입력하세요</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="v-card__actions"><button disabled="disabled" type="button" class="v-btn v-btn--block v-btn--disabled theme--light primary--text">
+      <div class="v-btn__content">Vote</div>
+    </button></div>
 </article>
 `;

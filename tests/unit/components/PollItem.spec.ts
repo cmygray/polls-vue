@@ -50,4 +50,20 @@ describe('PollItem.vue', () => {
       expect(wrapper).toMatchSnapshot();
     });
   })
+
+  describe('#handleClick', () => {
+    const SELECTED_CHOICE = poll.choices[0];
+    const EVENT = 'poll-item:vote'
+
+    it('should find and emit selected choice with expected event', () => {
+      wrapper.setData({
+        selectedChoiceId: SELECTED_CHOICE.id
+      })
+      wrapper.vm.handleClick()
+
+      expect(wrapper.emitted()[EVENT]).toEqual(expect.arrayContaining([
+        [SELECTED_CHOICE]
+      ]))
+    })
+  })
 });
