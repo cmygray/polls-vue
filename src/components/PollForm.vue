@@ -60,9 +60,7 @@ export default class PollForm extends Vue {
 
   get isUpdated(): boolean {
     return (
-      !!this.poll_title &&
-      this.poll_title !== this.poll.poll_title &&
-      this.choices.every(choice => !!choice['choice_text'])
+      !!this.poll_title && this.choices.every(choice => !!choice['choice_text'])
     );
   }
 

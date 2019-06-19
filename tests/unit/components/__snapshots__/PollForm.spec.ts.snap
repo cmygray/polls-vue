@@ -8,6 +8,6 @@ exports[`PollForm.vue renders as expected 1`] = `
   <v-text-field-stub label="Choice" value="항목을 입력하세요"></v-text-field-stub>
   <v-text-field-stub label="Choice" value="항목을 입력하세요"></v-text-field-stub>
   <v-text-field-stub label="Choice" value="항목을 입력하세요"></v-text-field-stub>
-  <v-btn-stub color="primary" activeclass="v-btn--active" disabled="true" tag="button" block="true" type="submit">Save</v-btn-stub>
+  <v-btn-stub color="primary" activeclass="v-btn--active" tag="button" block="true" type="submit">Save</v-btn-stub>
 </v-form-stub>
 `;
