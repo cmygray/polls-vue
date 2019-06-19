@@ -41,4 +41,23 @@ describe('getters', () => {
       ])
     })
   })
+
+  describe('getPollById', () => {
+    let returnedFunction: Function
+
+    beforeEach(() => {
+      state = {
+        polls: {
+          [poll.id]: poll
+        }
+      }
+      // @ts-ignore
+      returnedFunction = getters.getPollById(state)
+    })
+
+    it('should return function finds poll by its id', () => {
+      expect(typeof returnedFunction).toEqual('function')
+      expect(returnedFunction(poll.id)).toEqual(poll)
+    })
+  })
 })

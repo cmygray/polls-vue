@@ -7,4 +7,5 @@ export const getters: GetterTree<State, State> = {
       (currentPoll, nextPoll) =>
         +new Date(nextPoll.created_at) - +new Date(currentPoll.created_at)
     ),
+  getPollById: state => (id: string) => state.polls[id],
 };

@@ -2,6 +2,7 @@ import Vuex from 'vuex';
 import { mount, createLocalVue } from '@vue/test-utils';
 import PollEdit from '@/views/PollEdit.vue';
 import '../setup';
+import { poll } from '../__fixtures__';
 
 const localVue = createLocalVue();
 localVue.use(Vuex)
@@ -14,7 +15,12 @@ describe('PollEdit.vue', () => {
       localVue,
       propsData: {
         id: 'blah'
-      }
+      },
+      store: new Vuex.Store({
+        getters: {
+          getPollById: () => () => poll
+        }
+      })
     });
   });
 
