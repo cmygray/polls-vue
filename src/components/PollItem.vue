@@ -23,13 +23,19 @@
         label="Choices"
         hide-details
       >
-        <v-radio
-          v-for="choice of choices"
-          :key="choice.id"
-          :label="choice.choice_text"
-          :value="choice.id"
-          color="primary"
-        />
+        <div
+          v-for="choice in choices"
+          :key="`${choice.id}-${choice.votes_count}`"
+        >
+          <span
+            ><small>득표수: {{ choice.votes_count }}</small></span
+          >
+          <v-radio
+            :label="choice.choice_text"
+            :value="choice.id"
+            color="primary"
+          />
+        </div>
       </v-radio-group>
     </v-card-text>
 
@@ -56,12 +62,17 @@ export default class PollItem extends Vue {
   poll: Poll;
 
   selectedChoiceId: string = '';
-  choices: Choice[] = this.poll.choices;
 
   now: Date = new Date();
 
   get isInProgress(): boolean {
     return +new Date(this.poll.ends_at) > +this.now;
+  }
+
+  get choices(): Choice[] {
+    return this.poll.choices.sort((current, next) => {
+      return +current.id - +next.id;
+    });
   }
 
   @Emit('poll-item:vote')
