@@ -19,10 +19,10 @@ exports[`PollItem.vue when ongoing poll is provided as prop should render as exp
   <div class="v-card__text">
     <dl>
       <dt><small>시작</small></dt>
-      <dd>2019-06-18 06:28</dd>
+      <dd>2019-06-18 15:28</dd>
       <dt><small>종료</small></dt>
       <dd>
-        2019-06-19 11:00
+        2019-06-19 20:00
       </dd>
     </dl>
   </div>
