@@ -3,6 +3,8 @@
 exports[`PollForm.vue renders as expected 1`] = `
 <v-form-stub class="poll-form">
   <v-text-field-stub label="Poll Title" value="TEST"></v-text-field-stub>
+  <datetime-stub value="2019-06-18T15:28:29.909377" valuezone="Asia/Seoul" inputid="starts_at" inputclass="poll-form__date-time-input" inputstyle="" zone="local" format="yyyy-MM-dd HH:mm" type="datetime" phrases="[object Object]" hourstep="1" minutestep="10" mindatetime="2019-06-18T11:00:00.000Z" weekstart="1"><label for="starts_at">Start at</label></datetime-stub>
+  <datetime-stub value="2019-06-21T00:00:00" valuezone="Asia/Seoul" inputid="ends_at" inputclass="poll-form__date-time-input" inputstyle="" zone="local" format="yyyy-MM-dd HH:mm" type="datetime" phrases="[object Object]" hourstep="1" minutestep="10" mindatetime="2019-06-18T11:00:00.000Z" weekstart="1" class="mb-3"><label for="ends_at">End at</label></datetime-stub>
   <v-text-field-stub label="Choice" value="항목을 입력하세요"></v-text-field-stub>
   <v-text-field-stub label="Choice" value="항목을 입력하세요"></v-text-field-stub>
   <v-text-field-stub label="Choice" value="항목을 입력하세요"></v-text-field-stub>

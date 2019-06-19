@@ -11,6 +11,8 @@ export interface PollAttrs {
   id: string;
   poll_title: string;
   choices: Choice[];
+  starts_at: string;
+  ends_at: string;
 }
 
 export interface Choice {

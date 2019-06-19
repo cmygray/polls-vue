@@ -12,8 +12,5 @@ export async function createPoll(title: string): Promise<{ data: Poll }> {
 }
 
 export async function updatePoll(poll: PollAttrs): Promise<{ data: Poll }> {
-  return client.patch(`polls/${poll.id}`, {
-    poll_title: poll.poll_title,
-    choices: poll.choices,
-  });
+  return client.patch(`polls/${poll.id}`, poll);
 }
