@@ -13,7 +13,12 @@
       >Create</v-btn
     >
 
-    <poll-item v-for="poll in polls" :key="poll.id" :poll="poll" />
+    <poll-item
+      v-for="poll in polls"
+      :key="poll.id"
+      :poll="poll"
+      @poll-item:vote="handleVote"
+    />
   </v-container>
 </template>
 
@@ -22,7 +27,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import { Action, Getter } from 'vuex-class';
 
 import PollItem from '@/components/PollItem.vue';
-import { Poll } from '@/models';
+import { Choice, Poll } from '@/models';
 
 @Component({
   components: {
@@ -41,6 +46,9 @@ export default class Polls extends Vue {
   @Action('createPoll')
   createPoll: (param: string) => Promise<Poll>;
 
+  @Action('voteToPoll')
+  vote: (choice: Choice) => Promise<Poll>;
+
   async mounted() {
     await this.fetchPolls();
   }
@@ -57,6 +65,16 @@ export default class Polls extends Vue {
           id,
         },
       });
+    } catch (error) {
+      //
+    }
+  }
+
+  async handleVote(choice: Choice) {
+    if (!choice) return;
+
+    try {
+      await this.vote(choice);
     } catch (error) {
       //
     }
