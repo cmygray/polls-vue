@@ -1,4 +1,5 @@
 import { poll, pollList } from '../../../tests/unit/__fixtures__';
+import { Poll, PollAttrs } from '@/models';
 
 export const client = {
   get: (path: string) => {
@@ -9,7 +10,7 @@ export const client = {
     }
   },
 
-  post: (path: string, body: any) => {
+  post: (path: string, body: Poll) => {
     if (path === 'polls/') {
       return Promise.resolve({
         data: {
@@ -18,5 +19,14 @@ export const client = {
         },
       });
     }
+  },
+
+  patch: (path: string, body: PollAttrs) => {
+    return Promise.resolve({
+      data: {
+        ...poll,
+        ...body,
+      },
+    });
   },
 };

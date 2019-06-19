@@ -51,4 +51,33 @@ describe('actions', () => {
       expect(contextMock.commit).toBeCalledTimes(pollList.length)
     })
   })
+
+  describe('updatePoll', () => {
+    const POLL_ATTRS = {
+      poll_title: 'POLL_TITLE',
+      choices: poll.choices.map((choice, index) => ({
+        ...choice,
+        choice_text: `CHOICE_TEXT ${index + 1}`
+      }))
+    }
+
+    it('should return updated poll', async () => {
+      // @ts-ignore
+      const result = await actions.updatePoll(contextMock, POLL_ATTRS)
+
+      expect(result).toEqual({
+        ...poll,
+        ...POLL_ATTRS,
+      })
+    })
+
+    it('should commit expected mutation', async () => {
+      // @ts-ignore
+      await actions.updatePoll(contextMock, POLL_ATTRS)
+
+      expect(contextMock.commit).toBeCalledWith(
+        'SET_POLL', expect.objectContaining({})
+      )
+    })
+  })
 })

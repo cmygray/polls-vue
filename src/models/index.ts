@@ -7,6 +7,12 @@ export interface Poll {
   ends_at: string;
 }
 
+export interface PollAttrs {
+  id: string;
+  poll_title: string;
+  choices: Choice[];
+}
+
 export interface Choice {
   id: string;
   poll_id: number;

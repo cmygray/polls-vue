@@ -1,14 +1,15 @@
 import { ActionTree } from 'vuex';
 
 import { State } from '@/store/state';
-import { Poll } from '@/models';
-import { createPoll, fetchPolls } from '@/apis';
+import { Poll, PollAttrs } from '@/models';
+import { createPoll, fetchPolls, updatePoll } from '@/apis';
 
 export const actions: ActionTree<State, State> = {
   async fetchPolls({ commit }): Promise<Poll[]> {
     const { data } = await fetchPolls();
 
     data.forEach(poll => {
+      // TODO: setPoll 액션으로 분리
       commit('SET_POLL', poll);
     });
 
@@ -17,6 +18,14 @@ export const actions: ActionTree<State, State> = {
 
   async createPoll({ commit }, title): Promise<Poll> {
     const { data } = await createPoll(title);
+
+    commit('SET_POLL', data);
+
+    return data;
+  },
+
+  async updatePoll({ commit }, pollAttrs: PollAttrs): Promise<Poll> {
+    const { data } = await updatePoll(pollAttrs);
 
     commit('SET_POLL', data);
 
